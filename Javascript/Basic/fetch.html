@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fetch API</title>
+  </head>
+  <body>
+    <ul id="items"></ul>
+
+    <script>
+      const items = document.getElementById("items");
+
+      function rendertoScreen(obj) {
+        const product = obj.data.data;
+        product.forEach((product) => {
+          const li = document.createElement("li");
+          li.innerText = product.title;
+          items.appendChild(li);
+        });
+      }
+
+      fetch("https://api.freeapi.app/api/v1/public/randomproducts")
+        .then((response) => response.json())
+        .then(rendertoScreen)
+        .catch((err) => {})
+        .finally(() => {});
+    </script>
+  </body>
+</html>

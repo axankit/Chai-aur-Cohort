@@ -1,0 +1,121 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px 60px;
+    background: #1f2937;
+    font-size: 20px;
+    color: white;
+}
+
+div ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 35px;
+    text-decoration: none;
+    list-style: none;
+    cursor: pointer;
+}
+
+nav div button{
+    padding: 5px 10px;
+    border-radius: 10px;
+    border: none;
+    font-size: 17px;
+    cursor: pointer;
+}
+
+
+nav div button:hover{
+
+    color: white;
+    background-color: rgb(36, 36, 133);
+}
+
+/* Hero Section */
+
+.hero{
+    width: 100%;
+    display: flex;
+    padding: 30px 40px;
+    background: #1f2937;
+    color: white;
+    justify-content: space-around;
+
+}
+
+
+
+.hero-title{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+
+}
+
+.hero-title h1 {
+    font-size: 3rem;
+    
+}
+
+.hero-title p {
+    font-size: 1.2rem;
+    color: #a2a1a1;
+    
+}
+
+
+
+.hero-title  button{
+    border-radius: 8px;
+    padding: 5px 10px;
+    width: 30%;
+    background-color: #7e082d;
+    border: none;
+    font-size: 1em;
+    cursor: pointer;
+    color: #fff;
+}
+
+.hero-img{
+    width: 50%;
+    /* background-color: brown; */
+    padding-left: 25px;
+    margin-top: 10px;
+}
+
+.hero-img img{
+    border-radius: 15px;
+    object-fit: cover;
+    box-shadow: 0 0 10px white;
+
+
+}
+
+.hero-img img:hover{
+    transform: rotate(10deg);
+    transition: all 0.5s ease-in-out;
+} 
+
+
+/* our client section */
+.logo-text{
+    text-align: center;
+}
+
+.logo{
+    width: 100vw;
+    display: flex;
+    /* gap: 5px; */
+    justify-content: space-between;
+    background-color: #7e082d;
+}
