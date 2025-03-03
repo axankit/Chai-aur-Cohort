@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="board">
+        <!-- To do section -->
+        <h1>To do</h1>
+
+        <div class="task-container">
+          <p draggable="true" class="task">Learn HTML</p>
+          <p draggable="true" class="task">Learn Javascript</p>
+        </div>
+
+        <button class="add-task-btn">Add Task</button>
+      </div>
+
+      <!-- In Progress -->
+      <div class="board">
+        <h1>In Progress</h1>
+        <div class="task-container"></div>
+      </div>
+
+      <!-- Done section -->
+
+      <div class="board">
+        <h1>Done</h1>
+        <div class="task-container"></div>
+      </div>
+
+      <!-- Add board -->
+      <button class="add-board-btn">Add Board</button>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
