@@ -71,4 +71,3 @@ function completeCountUpdate(count) {
 addbtn.addEventListener("click", () => {
   taskManagement();
 });
-
