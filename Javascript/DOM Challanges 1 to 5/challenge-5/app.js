@@ -1,5 +1,8 @@
 /**
  * Write your challenge solution here
+ 
+ After the last image by animation its go back first element.
+  
  */
 // Image data
 const images = [
@@ -32,6 +35,7 @@ const timerDisplay = document.getElementById("timerDisplay");
 
 const img = document.createElement("img");
 img.classList.add("carousel-slide");
+
 carouselTrack.appendChild(img);
 
 const imgCaption = document.createElement("p");
@@ -48,12 +52,11 @@ let i = 0;
 addImageCaption(i);
 
 nextButton.addEventListener("click", () => {
-  console.log("click");
   if (i <= 3) {
     i++;
     if (i != 4) {
       addImageCaption(i);
-    } else if (i = 4) {
+    } else if ((i = 4)) {
       i = 0;
       addImageCaption(i);
     }
@@ -61,16 +64,58 @@ nextButton.addEventListener("click", () => {
 });
 
 prevButton.addEventListener("click", () => {
+  console.log("click", i);
   if (i == 0) {
-      i = 3;
-      addImageCaption(i);
-      i--
-  } else{
+    i = 3;
     addImageCaption(i);
-      i--
-
-
+  } else {
+    i--;
+    addImageCaption(i);
   }
 });
 
+/* AutoPlay Functionality
+/  Write down what you want to acheive
+1. that small grey to blue button
+*/
 
+/*
+for (let i = 0; i < 4; i++) {
+  const createIndicator = document.createElement("button");
+  createIndicator.classList.add("carousel-indicator");
+  carouselNav.appendChild(createIndicator);
+
+}
+
+1. we gonna create four buttons make the actionable
+  */
+
+const firstIndicator = document.createElement("button");
+const secondIndicator = document.createElement("button");
+const thirdIndicator = document.createElement("button");
+const fourIndicator = document.createElement("button");
+
+firstIndicator.classList.add("carousel-indicator");
+secondIndicator.classList.add("carousel-indicator");
+thirdIndicator.classList.add("carousel-indicator");
+fourIndicator.classList.add("carousel-indicator");
+
+carouselNav.appendChild(firstIndicator);
+carouselNav.appendChild(secondIndicator);
+carouselNav.appendChild(thirdIndicator);
+carouselNav.appendChild(fourIndicator);
+
+// Different approach
+
+const allIndicators = document.querySelectorAll(".carousel-indicator");
+
+allIndicators.forEach((indicator, index) => {
+  indicator.addEventListener("click", () => {
+    addImageCaption(index);
+
+    // Problem we are not able to tackle is as images changes only that indiacator color changes 
+    if (index == 0) {
+      indicator.classList.add("active");
+    }
+  });
+});

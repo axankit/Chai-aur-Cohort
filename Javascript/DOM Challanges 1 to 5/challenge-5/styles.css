@@ -22,12 +22,14 @@ h1 {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
+/* .carousel-track is that div section where all img element is present*/
 .carousel-track {
   display: flex;
   transition: transform 0.5s ease-in-out;
   height: 100%;
 }
 
+/* Each Slide */
 .carousel-slide {
   min-width: 100%;
   height: 100%;
@@ -57,12 +59,14 @@ h1 {
   width: 12px;
   height: 12px;
   border-radius: 50%;
-  background-color: #bbb;
+  background-color: #9b9a9a;
   margin: 0 5px;
   cursor: pointer;
   transition: background-color 0.3s;
+  border: none;
 }
 
+/* I am not going by using below this class for stylig */
 .carousel-indicator.active {
   background-color: #3498db;
 }
