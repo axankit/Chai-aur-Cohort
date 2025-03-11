@@ -119,3 +119,5 @@ allIndicators.forEach((indicator, index) => {
     }
   });
 });
+
+// Auto play in after every 5 sec and timer will be shown on the screen.
