@@ -80,13 +80,6 @@ prevButton.addEventListener("click", () => {
 */
 
 /*
-for (let i = 0; i < 4; i++) {
-  const createIndicator = document.createElement("button");
-  createIndicator.classList.add("carousel-indicator");
-  carouselNav.appendChild(createIndicator);
-
-}
-
 1. we gonna create four buttons make the actionable
   */
 
@@ -113,7 +106,7 @@ allIndicators.forEach((indicator, index) => {
   indicator.addEventListener("click", () => {
     addImageCaption(index);
 
-    // Problem we are not able to tackle is as images changes only that indiacator color changes 
+    // Problem we are not able to tackle is as images changes only that indiacator color changes
     if (index == 0) {
       indicator.classList.add("active");
     }
@@ -121,3 +114,37 @@ allIndicators.forEach((indicator, index) => {
 });
 
 // Auto play in after every 5 sec and timer will be shown on the screen.
+// I have to write a code for the function jaise hi ham autoplay click hoga setintervals start ho jayega and per sec bad i ki value change hogi
+
+autoPlayButton.addEventListener("click", autoplay);
+
+function autoplay() {
+  let slideTimer = 6;
+
+  const timer = setInterval(() => {
+    slideTimer--;
+    timerDisplay.innerText = `Next slides in ${slideTimer}`;
+
+    if (slideTimer <= 0) {
+      clearInterval(timer);
+      timerDisplay.innerText = ``;
+      if (i <= 3) {
+        i++;
+        if (i != 4) {
+          addImageCaption(i);
+        } else if ((i = 4)) {
+          i = 0;
+          addImageCaption(i);
+        }
+      }
+
+      autoplay();
+    }
+  }, 1 * 1000);
+
+  autoPlayButton.innerText = "Stop Auto Play";
+
+  autoPlayButton.addEventListener("click", () => {
+    clearInterval(timer);
+  });
+}
