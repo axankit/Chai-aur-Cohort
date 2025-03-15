@@ -65,3 +65,36 @@ fsv2
   .finally(() => console.log("All DOne"));
 
 */
+
+
+
+
+
+
+
+
+
+
+
+function wait(seconds) {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => resolve(), seconds * 1000);
+  });
+}
+
+async function doTasks() {
+  try {
+    const fileContent = await readFileWithPromise('./hello.txt', 'utf-8');
+    console.log('All DOne');
+    await writeFileWithPromise('./backup.txt', fileContent);
+    await wait(10);
+    await unlinkWithPromise('./hello.txt');
+  } catch (e) {
+    console.log('Error', e);
+  } 
+}
+console.log('Starting Program');
+
+doTasks().then(() => console.log('All Done'));
+
+console.log('End Of Program');
