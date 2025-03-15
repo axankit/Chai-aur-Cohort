@@ -1,0 +1,9 @@
+Syntax: 
+
+fs.unlink( path, callback )
+Parameters: This method accepts two parameters as mentioned above and described below: 
+
+path: It is a string, Buffer or URL that, represents the file or symbolic link that has to be removed.
+callback: It is a function that would be called when the method is executed. 
+err: It is an error that would be thrown if the method fails.
+The fs.unlink() method is used to delete files in Node.js.

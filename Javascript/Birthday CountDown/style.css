@@ -1,0 +1,75 @@
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #ff9a9e, #fad0c4);
+    text-align: center;
+    padding: 20px;
+    color: white;
+    overflow: hidden;
+}
+
+.title {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    animation: glow 2s infinite alternate;
+}
+
+@keyframes glow {
+    from {
+        text-shadow: 0 0 10px white;
+    }
+    to {
+        text-shadow: 0 0 20px yellow;
+    }
+}
+
+.countdown {
+    font-size: 2rem;
+    background: white;
+    color: black;
+    padding: 15px;
+    border-radius: 10px;
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+.hidden {
+    display: none;
+}
+
+.happy-birthday {
+    font-size: 3rem;
+    color: yellow;
+    animation: bounce 1s infinite;
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+.slider-container {
+    width: 80%;
+    max-width: 500px;
+    margin: 20px auto;
+    overflow: hidden;
+    border-radius: 15px;
+    border: 4px solid yellow;
+}
+
+.slider {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: opacity 1s;
+}
+
+.message {
+    font-size: 1.5rem;
+    background: white;
+    color: black;
+    padding: 10px;
+    border-radius: 10px;
+    max-width: 600px;
+    margin: 0 auto;
+}
