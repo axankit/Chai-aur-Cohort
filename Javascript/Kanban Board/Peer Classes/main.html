@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button id="button">experimentation</button>
+    <script>
+      const button = document.getElementById("button");
+
+      //   Situation 1 when we use ()
+    //   button.addEventListener("click", change());
+
+      //   Situation 2 when we dont use ()
+      button.addEventListener("click", change);
+
+      function change() {
+        document.body.style.background = "red";
+      }
+    </script>
+  </body>
+</html>
