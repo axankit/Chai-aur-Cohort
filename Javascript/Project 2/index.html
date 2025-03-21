@@ -1,19 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Countdown Timer</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+
     <div class="container">
-        <h1>CountDown Timer</h1>
-        <input type="number" id="timeInput" placeholder="Enter time in seconds">
-        <button id="startButton">Start Countdown</button>
-        <p id="countdownDisplay"></p>
+      <h1>CountDown Timer</h1>
+
+      <!-- Countdown field where user input the value. -->
+      <input type="number" id="timeInput" placeholder="Enter time in seconds" />
+      <button id="startButton">Start Countdown</button>
+
+ <!--Countdown Display  -->
+      <p id="countdownDisplay"></p>
+
+      <!-- Pause and Resume Button -->
+       <button id="resume">Resume</button>
+       <button id="pause">Pause</button>
     </div>
 
     <script src="app.js"></script>
-</body>
+  </body>
 </html>

@@ -1,10 +1,9 @@
-// alert("ha ji muskil per karna hai will power per nahi practice and training per dhayan de. and the for the next 21 days follow think school strategy to improve yourself.")
-
 const startButton = document.getElementById("startButton");
-
 const timeInput = document.getElementById("timeInput");
-
 const display = document.getElementById("countdownDisplay");
+
+const resumeButton = document.getElementById("resume");
+const pauseButton = document.getElementById("pause");
 
 let i = 1;
 
@@ -19,8 +18,28 @@ startButton.addEventListener("click", () => {
     display.innerText = "Please input number bigger than 0.";
   }
 
-  createButton();
-  //   const seconds=(i*1000)
+  resumeButton.style.display = "block";
+  pauseButton.style.display = "block";
+
+  resumeButton.addEventListener("click", resumeTimer);
+  pauseButton.addEventListener("click", pauseTimer);
+
+  function pauseTimer() {
+    console.log(timerValue);
+    clearInterval(timer);
+  }
+
+  function resumeTimer() {
+    const timer = setInterval(() => {
+      timerValue--;
+      display.innerText = `Remaining ${timerValue} seconds`;
+
+      if (timerValue <= 0) {
+        clearInterval(timer);
+        display.innerText = `Time is up ⏰ `;
+      }
+    }, i * 1000);
+  }
 
   const timer = setInterval(() => {
     timerValue--;
@@ -30,26 +49,9 @@ startButton.addEventListener("click", () => {
       clearInterval(timer);
       display.innerText = `Time is up ⏰ `;
     }
-
-    pauseButton.addEventListener("click", () => (i = 0));
-    resumeButton.addEventListener("click", () => (i = 1));
   }, i * 1000);
 });
 
 // we have to create resume and pause button while running the timer
 
-const container = document.querySelector(".container");
-
-function createButton() {
-  const resumeButton = document.createElement("button");
-  const pauseButton = document.createElement("button");
-
-  resumeButton.innerText = "Resume";
-  pauseButton.innerText = "Pause";
-
-  container.appendChild(resumeButton);
-  container.appendChild(pauseButton);
-
-  //   pauseButton.addEventListener("click", () => (i = 0));
-  //   resumeButton.addEventListener("click", () => (i = 1));
-}
+// const container = document.querySelector(".container");
