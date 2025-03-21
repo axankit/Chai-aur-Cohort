@@ -66,8 +66,7 @@ body {
   background-color: #7d5105;
 }
 
-
-.card{
+.card {
   background: #e1d89f;
   padding: 10px;
   margin-bottom: 10px;
@@ -75,8 +74,41 @@ body {
   color: black;
   cursor: grab;
   transition: all 0.3s, ease;
+
+  position: relative;
 }
 
-.card:hover{
+.card:hover {
   transform: scale(1.05);
+}
+
+.dragging {
+  display: none;
+}
+
+/* When we using hidden we are not able acheive the result.
+
+when we do display none that task is invisible.
+
+still we are not able to acheive the result.*/
+
+/* Edit and Delete button Style */
+.context-menu {
+  background: #fff;
+  padding: 10px 0px;
+  border-radius: 4px;
+  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+  display: none;
+  position: absolute;
+}
+
+.context-menu ul li {
+  /* background: #979696; */
+  list-style: none;
+  cursor: pointer;
+  padding: 8px 20px;
+}
+
+.context-menu ul li:hover {
+  background: #d1d0d0;
 }
