@@ -5,7 +5,7 @@
 const digitalClock = document.querySelector(".digital-clock");
 const date = document.querySelector(".date");
 
-function update() {
+function updateDigitalClock() {
   const clock = new Date();
   const hour = (clock.getHours() % 12).toString().padStart(2, 0);
   const minutes = clock.getMinutes();
@@ -25,4 +25,25 @@ function update() {
 
 }
 
-setInterval(update, 1 * 1000);
+setInterval(updateDigitalClock, 1 * 1000);
+
+
+
+// for every hour, the hour hand will move 360/12 and same approch for minutes and seconds hand
+
+
+const handClock=document.querySelector(".clock")
+
+function handClockUpdate(){
+  let numbers=[1,2,3,4,5,6,7,8,9,10,11,12]
+
+  numbers.forEach((n)=>{
+    const create=document.createElement("div")
+    create.innerText=n
+    create.classList.add("number")
+    handClock.appendChild(create)
+
+  })
+}
+
+handClockUpdate()
