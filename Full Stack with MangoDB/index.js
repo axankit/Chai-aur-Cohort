@@ -1,16 +1,16 @@
 import express from "express"
 import dotenv from "dotenv"
-// import cors from "cors"
+import cors from "cors"
 
 dotenv.config()
 
 const app = express()
 const port = process.env.PORT || 3000
 
-// app.use(cors({
-//     origin:"htt"
-// }
-// ))
+app.use(cors({
+    origin:"htt"
+}
+))
 
 app.get('/', (req, res) => {
   res.send('Starting me ragdna parta hai')
