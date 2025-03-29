@@ -1,13 +1,13 @@
 {
   "name": "full-stack-with-mangodb",
   "version": "1.0.0",
-  "description": "Authentication Application using MangoDB",
+  "description": "Authentication Project ",
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "dev": "nodemon index.js"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js"
   },
-  "keywords": [],
   "author": "Ankit Ranjan",
   "license": "ISC",
   "dependencies": {
